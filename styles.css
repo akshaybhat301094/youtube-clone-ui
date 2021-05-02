@@ -217,15 +217,18 @@ header div {
   width: 100%;
   height: calc(100% - 56px);
   padding: 22px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
   overflow: auto;
+  gap: 20px;
 }
 
 .video--wrapper .video--card {
   height: 270px;
-  padding: 15px;
   cursor: pointer;
+  max-width: 300px;
+  flex: 0 1 25%;
 }
 
 .video--wrapper .video--card .video--thumbnail {
