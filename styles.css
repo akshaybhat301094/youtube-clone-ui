@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --black-100: #212121;
+  --black-200: #191919;
+  --black-300: #131313;
+  --black-400: #222222;
+  --grey-100: #323232;
+  --grey-200: #6c6c6c;
+  --grey-300: #303030;
+  --grey-400: #383838;
+  --grey-500: #4c4c4c;
+  --grey-600: #4d4d4d;
+  --grey-700: #aaaaaa;
+  --white-100: #f9f9f9;
+  --white-200: #fefefe;
+  --white-300: #fff;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  min-height: 100vh;
+  color: white;
+  box-sizing: border-box;
+}
+
+.wrapper--container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-200);
+}
+
+/***********************/
+/* header css starts from here */
+/***********************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: var(--black-100);
+  height: 56px;
+}
+
+header .logo--navbar {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+header .logo--navbar .logo--hamburger {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .logo--navbar .logo--youtube {
+  width: 75%;
+}
+
+#youtube-paths {
+  fill: white;
+}
+
+header .searchbar--main {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .searchbar--main .searchbar--main--search {
+  display: flex;
+  width: 80%;
+  height: 30px;
+  border: 1px solid var(--grey-300);
+  border-radius: 2px;
+  margin-left: 60px;
+}
+
+header .searchbar--main .searchbar--main--search .search--bar {
+  width: 90%;
+  background-color: var(--black-300);
+}
+
+header .searchbar--main .searchbar--main--search .search--bar::placeholder {
+  padding-left: 14px;
+  font-size: 1rem;
+}
+
+header .searchbar--main .searchbar--main--search button {
+  width: 10%;
+  background-color: var(--grey-100);
+  cursor: pointer;
+}
+header .searchbar--main .searchbar--main--search button i {
+  color: var(--grey-200);
+  font-size: 20px;
+}
+
+header .searchbar--main .searchbar--main-mic {
+  width: 20%;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+}
+
+header .action--header {
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header i {
+  cursor: pointer;
+}
+
+header .action--header .account--picture {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+header div {
+  /* border: 1px solid white; */
+}
+
+/***********************/
+/* header css ends here */
+/***********************/
+
+/***********************/
+/* main container  css starts here */
+/***********************/
+
+.main--content {
+  width: 100%;
+  height: calc(100% - 56px);
+  display: flex;
+}
+
+/* side bar css starts from here */
+
+.sidebar--container {
+  width: 240px;
+  height: 100%;
+  background-color: var(--black-400);
+}
+
+/* side bar css starts ends from here */
+
+/* main wrapper css starts from here */
+
+.data--wrapper {
+  height: 100%;
+  width: calc(100% - 240px);
+}
+
+/* tags section css starts from here */
+
+.data--wrapper .tags--main {
+  width: 100%;
+  height: 56px;
+  background-color: var(--black-100);
+  border-bottom: 1px solid var(--grey-400);
+  border-top: 1px solid var(--grey-400);
+}
+
+.tags--main ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tags--main ul li {
+  width: auto;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: var(--white-100);
+  background-color: var(--grey-400);
+  border: 1px solid var(--grey-500);
+  border-radius: 50px;
+  line-height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tags--main ul li:hover {
+  color: var(--white-200);
+  background-color: var(--grey-600);
+}
+
+.tags--main ul :first-child {
+  color: var(--black-400);
+  background-color: var(--white-300);
+}
+
+/* tags section css ends here */
+
+/* video css starts from here */
+
+.data--wrapper .video--wrapper {
+  width: 100%;
+  height: calc(100% - 56px);
+  padding: 22px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  overflow: auto;
+}
+
+.video--wrapper .video--card {
+  height: 270px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.video--wrapper .video--card .video--thumbnail {
+  height: 60%;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: var(--white-100);
+  position: relative;
+}
+
+.video--thumbnail::after {
+  content: '03:50';
+  width: 40px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  background-color: var(--grey-100);
+  bottom: 5px;
+  right: 5px;
+  padding: 1px;
+  border-radius: 2px;
+}
+
+.video--info {
+  display: flex;
+}
+
+.video--info .channel--logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--grey-200);
+}
+
+.video--info .video--text {
+  width: 70%;
+  margin-left: 20px;
+}
+
+.video--text--title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.channel--name,
+.video--insights {
+  color: var(--grey-700);
+  padding: 2px;
+  font-size: 14px;
+}
+
+/* video css ends here */
+
+/* main wrapper css ends from here */
+
+/***********************/
+/* main container  css starts here */
+/***********************/
